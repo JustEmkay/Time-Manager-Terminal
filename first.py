@@ -3,7 +3,7 @@ from curses import wrapper
 from datetime import datetime , time as t
 import time
 
-file_path : str = "data\journal.json"
+file_path : str = r"data\journal.json"
 menu_items : list[str] = ['Home', 'Clock' ,'Reminder', 
                           'Journal', 'Exit']
 
