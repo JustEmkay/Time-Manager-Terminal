@@ -1,1 +1,12 @@
-[{"productivity": 0, "mood": 0, "agenda_not_done": ["Go for a walk", "Do 10k walk minimum "], "agenda_done": [], "thankful": [], "lessons": "", "sucks": "sleep early/ wake up at 5am", "created_date": 1725531555}]
+[
+  {
+    "productivity": 0,
+    "mood": 0,
+    "agenda_not_done": ["Go for a walk", "Do 10k walk minimum "],
+    "agenda_done": [],
+    "thankful": [],
+    "lessons": "",
+    "sucks": "sleep early/ wake up at 5am",
+    "created_date": 1725531555
+  }
+]

@@ -72,7 +72,7 @@ def menu(stdscr,options,ms_index,x,y,RED_WHITE) -> None:
                
 def clock(stdscr,RED_WHITE) -> None:
     stdscr.nodelay(True)
-    
+    stdscr.timeout(1000)
     # x : int = 2
     # y : int = 2
     
@@ -80,7 +80,7 @@ def clock(stdscr,RED_WHITE) -> None:
         clock = datetime.today().strftime("%B %d, %Y | %I:%M:%S %p")
         stdscr.clear()
         stdscr.addstr(x,y,clock,curses.A_BOLD)
-        time.sleep(1)
+        # time.sleep(1)
         stdscr.addstr(x+1,y,"press Q to exit")
         try:
             key = stdscr.getkey()
@@ -89,7 +89,7 @@ def clock(stdscr,RED_WHITE) -> None:
         if key == "q" :
             stdscr.nodelay(False)        
             return 0
-        stdscr.refresh()
+        # stdscr.refresh()
 
 def journal_menu(stdscr,j_index,RED_WHITE)->None:
     stdscr.refresh()
