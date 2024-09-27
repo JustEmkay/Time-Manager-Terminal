@@ -1,6 +1,6 @@
 from datetime import datetime
 
-today_stamp = datetime(datetime.now().year,datetime.now().month,datetime.now().day,0,0,0).timestamp()
+today_stamp = int(datetime(datetime.now().year,datetime.now().month,datetime.now().day,0,0,0).timestamp())
 
 class Todo:
     
@@ -14,5 +14,16 @@ class Todo:
          self.task_date = task_date if task_date is not None else int(today_stamp)
          
     def __str__(self) -> str:
-          return f'{self.task_date} : {self.task} | priority:{self.priority} | usrgent:{self.urgent} | status: {self.status}'
+          return f'{datetime.fromtimestamp(self.task_date).strftime("%d-%m-%Y")} : {self.task} | priority:{self.priority} | usrgent:{self.urgent} | status: {self.status}'
       
+
+    def task_toDict(self) -> dict:
+        
+        result : dict = {
+            'task' : self.task,
+            'priority' : self.priority,
+            'urgent' : self.urgent,
+            'status' : self.status
+        }
+        
+        return result 
